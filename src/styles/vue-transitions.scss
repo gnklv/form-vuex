@@ -1,0 +1,7 @@
+.slide-right-enter-active {
+  transition: opacity .5s, transform .5s;
+}
+.slide-right-enter {
+  transform: translateX(50px);
+  opacity: 0;
+}
