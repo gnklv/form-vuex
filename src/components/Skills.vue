@@ -81,28 +81,17 @@
 </template>
 
 <script>
-import { mapGetters, mapMutations } from 'vuex';
+import { mapState, mapMutations } from 'vuex';
 
 export default {
   name: "Skills",
   computed: {
-    ...mapGetters(['GET_SKILL'])
+    ...mapState({
+      skill: state => state.skill
+    })
   },
-  created() {
-    this.getData();
-  },
-  data: () => ({
-    skill: {
-      html: '',
-      css: '',
-      js: ''
-    }
-  }),
   methods: {
     ...mapMutations(['SET_SKILL']),
-    getData() {
-      this.skill = this.GET_SKILL;
-    },
     submit() {
       this.SET_SKILL(this.skill);
     },

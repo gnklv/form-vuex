@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <v-container>
     <TheHeader />
 
     <v-content>
       <slot />
     </v-content>
 
-  </div>
+  </v-container>
 </template>
 
 <script>
